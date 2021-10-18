@@ -1,5 +1,5 @@
 # PhotoManagementSystem
-This a Photo Management System that allows users to upload their photos in MongoDB Atlas Database through a web-application made with Expess Node.js.
+This is a Photo Management System that allows users to upload their photos in MongoDB Atlas Database through a web application made with Express Node.js.
 
 # 1. Prerequisites
 1. You should have Node.js and npm installed on your system. For Information on installation, read https://docs.npmjs.com/downloading-and-installing-node-js-and-npm
