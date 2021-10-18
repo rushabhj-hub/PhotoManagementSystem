@@ -1,0 +1,95 @@
+<br>
+{{!-- section --}}
+<div class="container text-center">
+    <div class="title py-5" style="background-color: rgba(104, 235, 235, 0.972);border-radius: 20px;">
+        <h1>Photo Management System</h1>
+        <p class="subtitle" style="color: white;">Store Your Images In A Smarter Way. Upload Now!</p>
+    </div>
+
+    <br>
+
+    <div class="row justify-content-center">
+        <div class="col-4">
+            <form action="/uploadmultiple" enctype="multipart/form-data" method="POST">
+                <div class="row">
+                    <div class="col-8">
+                        <input type="file" class="form-control" name="images" id="formFile" multiple>
+                    </div>
+                    <div class="col-2">
+                        <input type="submit" class="btn btn-warning" value="Upload Images">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <br>
+
+
+
+    <div class="row">
+        <div class="col" style="background-color: rgb(89, 182, 236);padding : 15px 15px 15px 15px;border-radius:20px">
+
+            <h3>Filter By Upload Date and Time</h3>
+            <br>
+            <form action="/sortbydatedesc">
+                <button type="submit" class="btn btn-primary">Sort By : Recent to Old</button>
+            </form>
+            <br>
+            <form action="/sortbydateasc">
+                <button type="submit" class="btn btn-primary">Sort By : Old to Recent</button>
+            </form>
+        </div>
+
+        <div class="col"></div>
+        <div class="col" style="background-color: rgb(89, 182, 236);padding : 15px 15px 15px 15px;border-radius:20px">
+            <h3>Filter By Image Size</h3>
+            <br>
+            <form action="/sortbysizeasc">
+                <button type="submit" class="btn btn-primary">Sort By : Small to Large</button>
+
+            </form>
+            <br>
+            <form action="/sortbysizedesc">
+                <button type="submit" class="btn btn-primary">Sort By : Large to Small</button>
+
+            </form>
+        </div>
+
+
+    </div>
+
+<br>
+    <h2>
+        Your Uploaded Images
+    </h2>
+ <br>
+
+    {{!-- display images --}}
+    <section class="mt-5">
+        <div class="row">
+            {{#each images}}
+            {{#each this}}
+            {{#if imageBase64 }}
+            {{!-- bootstrap cads --}}
+            <div class="col-3">
+                <div class="card shadow" style="width: 18rem;">
+                    <img src='data:{{contentType}};base64,{{imageBase64}}' class="card-img-top" class="img-fluid"
+                        alt="...">
+                    <div class="card-body">
+                        
+                        <p class="text-secondary font-size-09">Upload Information : {{date}}</p>
+                        
+                    </div>
+                </div>
+            </div>
+            {{!-- /bootstrap cads --}}
+            {{/if}}
+            {{/each}}
+            {{/each}}
+        </div>
+    </section>
+    {{!-- /display images --}}
+
+</div>
+</section>
+{{!-- /section --}}
