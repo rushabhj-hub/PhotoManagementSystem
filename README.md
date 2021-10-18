@@ -21,8 +21,10 @@ npm start
 ```
 Open a brower and open localhost 3000 port or http://localhost:3000/ .
 #### You should see the interface as below :
+![Preview image](https://github.com/rushabhj-hub/PhotoManagementSystem/blob/main/Photo_Management_System/first.png)
 
 
 # 3. Executing the functionalities
 Now you can add images to your database. All images will be visible as you add them. Use the Filter Options available as required.
+![After uploading photos](https://github.com/rushabhj-hub/PhotoManagementSystem/blob/main/Photo_Management_System/second.png)
 You can go and check the metadata of the image objects in your MongoDB Atlas.
